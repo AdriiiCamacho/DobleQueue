@@ -62,6 +62,10 @@ public class DoublyLinkedListDeque<T> implements DoubleEndedQueue<T> {
     public void deleteLast() throws Exception {
         if (size==0){
             throw new Exception("No hay ultimo");
+        }else if (size == 1){
+            first = null;
+            last = null;
+            size--;
         }else{
             last.getPrevious().setNext(null);
             last = last.getPrevious();
