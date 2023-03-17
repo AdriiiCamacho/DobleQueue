@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e05c7f5-e1a2-47d1-8329-263485aa63ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DequeNodeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DoublyLinkedListDequeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DequeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DequeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DoubleEndedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DoubleEndedQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DoubleEndedQueueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DoubleEndedQueueException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DoublyLinkedListDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DoublyLinkedListDeque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DequeNodeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DoublyLinkedListDequeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DequeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DoubleEndedQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DoubleEndedQueueException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DoublyLinkedListDeque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DequeNodeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DoublyLinkedListDequeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DoublyLinkedListDequeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DoublyLinkedListDequeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/DoubleEndedQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/DoubleEndedQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/DoublyLinkedListDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/DoublyLinkedListDeque.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/DoublyLinkedListDequeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/DoublyLinkedListDequeTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +75,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in DQue">
+  <component name="RunManager" selected="JUnit.DoublyLinkedListDequeTest">
     <configuration name="DequeNodeTest.isNotATerminalNodeFalseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Practica-2" />
       <extension name="coverage">
@@ -123,6 +108,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DoublyLinkedListDequeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DQue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DoublyLinkedListDequeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="java in DQue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DQue" />
       <option name="TEST_OBJECT" value="directory" />
@@ -146,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DoublyLinkedListDequeTest" />
         <item itemvalue="JUnit.java in DQue" />
         <item itemvalue="JUnit.DequeNodeTest.isNotATerminalNodeFalseTest" />
         <item itemvalue="JUnit.DequeNodeTest.isNotATerminalNodeTestTrue" />
@@ -162,7 +163,7 @@
       <updated>1678481121817</updated>
       <workItem from="1678481122911" duration="1148000" />
       <workItem from="1678482501324" duration="1407000" />
-      <workItem from="1679081857778" duration="894000" />
+      <workItem from="1679081857778" duration="1784000" />
     </task>
     <servers />
   </component>
