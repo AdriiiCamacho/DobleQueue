@@ -1,94 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DoublyLinkedListDeque.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DQue</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">DoublyLinkedListDeque.java</span></div><h1>DoublyLinkedListDeque.java</h1><pre class="source lang-java linenums">package org.example;
 
+import java.util.Comparator;
+
 public class DoublyLinkedListDeque&lt;T&gt; implements DoubleEndedQueue&lt;T&gt; {
 
     private DequeNode&lt;T&gt; first;
     private DequeNode&lt;T&gt; last;
     private int size;
 
-<span class="fc" id="L9">    public DoublyLinkedListDeque() {</span>
-<span class="fc" id="L10">    first = null;</span>
-<span class="fc" id="L11">    last = null;</span>
-<span class="fc" id="L12">    size = 0;</span>
-<span class="fc" id="L13">    }</span>
+<span class="fc" id="L11">    public DoublyLinkedListDeque() {</span>
+<span class="fc" id="L12">    first = null;</span>
+<span class="fc" id="L13">    last = null;</span>
+<span class="fc" id="L14">    size = 0;</span>
+<span class="fc" id="L15">    }</span>
 
     @Override
     public void prepend(T value) {
-<span class="fc" id="L17">         DequeNode nuevo = new DequeNode&lt;&gt;(value, null, null);</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (first == null){</span>
-<span class="fc" id="L19">            first = nuevo;</span>
-<span class="fc" id="L20">            last = nuevo;</span>
+<span class="fc" id="L19">         DequeNode nuevo = new DequeNode&lt;&gt;(value, null, null);</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (first == null){</span>
+<span class="fc" id="L21">            first = nuevo;</span>
+<span class="fc" id="L22">            last = nuevo;</span>
         } else {
-<span class="fc" id="L22">            first.setPrevious(nuevo);</span>
-<span class="fc" id="L23">            nuevo.setNext(first);</span>
-<span class="fc" id="L24">            first = nuevo;</span>
+<span class="fc" id="L24">            first.setPrevious(nuevo);</span>
+<span class="fc" id="L25">            nuevo.setNext(first);</span>
+<span class="fc" id="L26">            first = nuevo;</span>
         }
-<span class="fc" id="L26">        size++;</span>
-<span class="fc" id="L27">    }</span>
+<span class="fc" id="L28">        size++;</span>
+<span class="fc" id="L29">    }</span>
 
     @Override
     public void append(T value) {
-<span class="fc" id="L31">        DequeNode nuevo = new DequeNode&lt;&gt;(value, null, null);</span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (first == null){</span>
-<span class="fc" id="L33">            first = nuevo;</span>
-<span class="fc" id="L34">            last = nuevo;</span>
+<span class="fc" id="L33">        DequeNode nuevo = new DequeNode&lt;&gt;(value, null, null);</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (first == null){</span>
+<span class="fc" id="L35">            first = nuevo;</span>
+<span class="fc" id="L36">            last = nuevo;</span>
         } else {
-<span class="fc" id="L36">            last.setNext(nuevo);</span>
-<span class="fc" id="L37">            nuevo.setPrevious(last);</span>
-<span class="fc" id="L38">            last = nuevo;</span>
+<span class="fc" id="L38">            last.setNext(nuevo);</span>
+<span class="fc" id="L39">            nuevo.setPrevious(last);</span>
+<span class="fc" id="L40">            last = nuevo;</span>
         }
-<span class="fc" id="L40">        size++;</span>
-<span class="fc" id="L41">    }</span>
+<span class="fc" id="L42">        size++;</span>
+<span class="fc" id="L43">    }</span>
 
     @Override
     public void deleteFirst() throws Exception {
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (size==0){</span>
-<span class="fc" id="L46">            throw new DoubleEndedQueueException(&quot;No hay primero&quot;);</span>
-<span class="fc bfc" id="L47" title="All 2 branches covered.">        } else if (size ==1 ){</span>
-<span class="fc" id="L48">            first = null;</span>
-<span class="fc" id="L49">            last = null;</span>
-<span class="fc" id="L50">            size--;</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (size==0){</span>
+<span class="fc" id="L48">            throw new DoubleEndedQueueException(&quot;No hay primero&quot;);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        } else if (size ==1 ){</span>
+<span class="fc" id="L50">            first = null;</span>
+<span class="fc" id="L51">            last = null;</span>
+<span class="fc" id="L52">            size--;</span>
         }else{
-<span class="fc" id="L52">                first.getNext().setPrevious(null);</span>
-<span class="fc" id="L53">                first = first.getNext();</span>
-<span class="fc" id="L54">                size--;</span>
+<span class="fc" id="L54">                first.getNext().setPrevious(null);</span>
+<span class="fc" id="L55">                first = first.getNext();</span>
+<span class="fc" id="L56">                size--;</span>
             }
-<span class="fc" id="L56">        }</span>
+<span class="fc" id="L58">        }</span>
         ;
 
 
     @Override
     public void deleteLast() throws Exception {
-<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (size==0){</span>
-<span class="fc" id="L63">            throw new DoubleEndedQueueException(&quot;No hay ultimo&quot;);</span>
-<span class="fc bfc" id="L64" title="All 2 branches covered.">        }else if (size == 1){</span>
-<span class="fc" id="L65">            first = null;</span>
-<span class="fc" id="L66">            last = null;</span>
-<span class="fc" id="L67">            size--;</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (size==0){</span>
+<span class="fc" id="L65">            throw new DoubleEndedQueueException(&quot;No hay ultimo&quot;);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        }else if (size == 1){</span>
+<span class="fc" id="L67">            first = null;</span>
+<span class="fc" id="L68">            last = null;</span>
+<span class="fc" id="L69">            size--;</span>
         }else{
-<span class="fc" id="L69">            last.getPrevious().setNext(null);</span>
-<span class="fc" id="L70">            last = last.getPrevious();</span>
-<span class="fc" id="L71">            size--;</span>
+<span class="fc" id="L71">            last.getPrevious().setNext(null);</span>
+<span class="fc" id="L72">            last = last.getPrevious();</span>
+<span class="fc" id="L73">            size--;</span>
         }
-<span class="fc" id="L73">    }</span>
+<span class="fc" id="L75">    }</span>
     ;
 
     @Override
     public T first() {
 
-<span class="fc" id="L79">        return first.getItem();</span>
+<span class="fc" id="L81">        return first.getItem();</span>
     }
 
     @Override
     public T last() {
 
-<span class="fc" id="L85">        return last.getItem();</span>
+<span class="fc" id="L87">        return last.getItem();</span>
     }
 
     @Override
     public int size() {
 
-<span class="fc" id="L91">        return size;</span>
+<span class="fc" id="L93">        return size;</span>
     }
+
+    @Override
+    public T get(int index) {
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        if(size &gt; 0) {</span>
+<span class="fc" id="L99">            DequeNode&lt;T&gt; a = first;</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">            for (int i = 0; i &lt; index; i++) {</span>
+<span class="fc" id="L101">                a = a.getNext();</span>
+            }
+<span class="fc" id="L103">            return a.getItem();</span>
+        }else{
+<span class="fc" id="L105">            throw new DoubleEndedQueueException(&quot;Lista vacia&quot;);</span>
+        }
+    }
+
+    @Override
+    public boolean contains(T value) {
+<span class="fc" id="L111">        DequeNode a = first;</span>
+<span class="fc" id="L112">        boolean aux = false;</span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">        if(size != 0){</span>
+<span class="fc bfc" id="L114" title="All 4 branches covered.">            while(!aux &amp;&amp; a != null){</span>
+<span class="fc bfc" id="L115" title="All 2 branches covered.">                if(a.getItem().equals(value)){</span>
+<span class="fc" id="L116">                    aux = true;</span>
+                }
+<span class="fc" id="L118">                a = a.getNext();</span>
+            }
+        }
+<span class="fc" id="L121">        return aux;</span>
+    }
+
+    @Override
+    public void remove(T value) throws Exception {
+<span class="fc" id="L126">        DequeNode a = first;</span>
+<span class="fc" id="L127">        boolean encontrado = false;</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        if(size != 0){</span>
+<span class="fc bfc" id="L129" title="All 4 branches covered.">            while(!encontrado &amp;&amp; a != null){</span>
+<span class="fc bfc" id="L130" title="All 2 branches covered.">                if(a.getItem().equals(value)){</span>
+<span class="fc" id="L131">                    encontrado = true;</span>
+                }else{
+<span class="fc" id="L133">                    a = a.getNext();</span>
+                }
+            }
+        }else{
+<span class="fc" id="L137">            throw new DoubleEndedQueueException(&quot;Lista vacia&quot;);</span>
+        }
+<span class="fc bfc" id="L139" title="All 4 branches covered.">        if(encontrado &amp;&amp; a.isNotATerminalNode()){</span>
+<span class="fc" id="L140">            a.getPrevious().setNext(a.getNext());</span>
+<span class="fc" id="L141">            a.getNext().setPrevious(a.getPrevious());</span>
+<span class="fc bfc" id="L142" title="All 4 branches covered.">        }else if (encontrado &amp;&amp; a == first) {</span>
+<span class="fc" id="L143">            deleteFirst();</span>
+<span class="fc bfc" id="L144" title="All 2 branches covered.">        }else if (encontrado) {</span>
+<span class="fc" id="L145">            deleteLast();</span>
+        }
+<span class="fc" id="L147">    }</span>
+
+    @Override
+    public void sort(Comparator&lt;? super T&gt; comparator) {
+<span class="fc bfc" id="L151" title="All 2 branches covered.">        if(size &lt;= 1) {</span>
+<span class="fc" id="L152">            return;</span>
+        }
+<span class="fc" id="L154">        boolean ordenado = false;</span>
+<span class="fc bfc" id="L155" title="All 2 branches covered.">        while(!ordenado) {</span>
+<span class="fc" id="L156">            ordenado = true;</span>
+<span class="fc" id="L157">            DequeNode&lt;T&gt; a = first;</span>
+<span class="fc bfc" id="L158" title="All 2 branches covered.">            while(a.getNext() != null) {</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">                if(comparator.compare(a.getItem(), a.getNext().getItem()) &gt; 0) {</span>
+<span class="fc" id="L160">                    DequeNode&lt;T&gt; next = a.getNext();</span>
+<span class="fc" id="L161">                    DequeNode&lt;T&gt; prev = a.getPrevious();</span>
+<span class="fc bfc" id="L162" title="All 2 branches covered.">                    if(prev != null) {</span>
+<span class="fc" id="L163">                        prev.setNext(next);</span>
+                    } else {
+<span class="fc" id="L165">                        first = next;</span>
+                    }
+<span class="fc" id="L167">                    next.setPrevious(prev);</span>
+<span class="fc" id="L168">                    a.setPrevious(next);</span>
+<span class="fc" id="L169">                    a.setNext(next.getNext());</span>
+<span class="fc bfc" id="L170" title="All 2 branches covered.">                    if(next.getNext() != null) {</span>
+<span class="fc" id="L171">                        next.getNext().setPrevious(a);</span>
+                    } else {
+<span class="fc" id="L173">                        last = a;</span>
+                    }
+<span class="fc" id="L175">                    next.setNext(a);</span>
+<span class="fc" id="L176">                    ordenado = false;</span>
+<span class="fc" id="L177">                } else {</span>
+<span class="fc" id="L178">                    a = a.getNext();</span>
+                }
+            }
+<span class="fc" id="L181">        }</span>
+<span class="fc" id="L182">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

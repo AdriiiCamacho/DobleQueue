@@ -7,9 +7,6 @@
     <list default="true" id="6e05c7f5-e1a2-47d1-8329-263485aa63ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DoublyLinkedListDequeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DoublyLinkedListDequeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/DoubleEndedQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/DoubleEndedQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/DoublyLinkedListDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/DoublyLinkedListDeque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/DoublyLinkedListDequeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/DoublyLinkedListDequeTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +160,7 @@
       <updated>1678481121817</updated>
       <workItem from="1678481122911" duration="1148000" />
       <workItem from="1678482501324" duration="1407000" />
-      <workItem from="1679081857778" duration="1784000" />
+      <workItem from="1679081857778" duration="2146000" />
     </task>
     <servers />
   </component>
