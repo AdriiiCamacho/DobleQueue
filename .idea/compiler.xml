@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DQueue" />
+        <module name="DQue" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DQueue" target="19" />
+      <module name="Practica-2" target="12" />
+    </bytecodeTargetLevel>
   </component>
 </project>
